@@ -250,8 +250,8 @@ public class CarGame  extends JFrame implements KeyListener, ActionListener{
             g.setColor(Color.black);
             g.fillRect(390,40,170,40);
             g.setColor(Color.white);
-            g.setFont(new Font("serif", Font.BOLD, 40));
-            g.drawString("Score:" + score, 130, 60);
+            g.setFont(new Font("MV Boli", Font.BOLD, 30));
+            g.drawString("Score:" + score, 130, 67);
             g.drawString(speed+"Km/h", 400, 67);
             score++;
             speed++;
@@ -265,7 +265,8 @@ public class CarGame  extends JFrame implements KeyListener, ActionListener{
                 }
             }
             try {
-                TimeUnit.MILLISECONDS.sleep(delay); //delay the game
+                TimeUnit.MILLISECONDS.sleep(delay
+                ); //delay the game
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -286,12 +287,13 @@ public class CarGame  extends JFrame implements KeyListener, ActionListener{
                 g.setColor(Color.gray);
                 g.fillRect(120,210,460,200);
                 g.setColor(Color.darkGray);
-                g.setFont(new Font("serif", Font.BOLD, 40));
+                g.fillRect(130, 220, 440, 180);
+                g.setFont(new Font("MV Boli", Font.BOLD, 50));
                 g.setColor(Color.red);
                 g.drawString("Game Over", 210, 270);
                 g.setColor(Color.white);
                 g.setFont(new Font("MV Boli", Font.BOLD, 30));
-                g.drawString("Press enter to play again",190,340);
+                g.drawString("Press enter to restart",190,340);
                 if (!paint) {
                     repaint();
                     paint = true;
